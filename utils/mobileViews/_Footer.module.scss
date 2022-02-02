@@ -1,0 +1,14 @@
+@media screen and (max-width: 782px){
+  .FooterContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 50px;
+    border-top: 1px rgb(71, 71, 71) solid;
+  }
+}

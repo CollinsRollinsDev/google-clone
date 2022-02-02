@@ -1,0 +1,64 @@
+@media screen and (max-width: 782px){
+  .SearchContainer{
+    height: 60px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // background-color: red;
+    row-gap: 5px;
+    align-items: flex-start;
+    form{
+      flex: 1;
+      height: 100%;
+      width: 100%;
+    }
+    input{
+      // flex: 1;
+      height: 100%;
+      width: 100%;
+      padding: 5px;
+      outline: none !important;
+      background-color: white;
+      border-style: solid;
+      border-radius: 10px;
+      border-color: transparent;
+    }
+    .navLinks{
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div{
+        font-weight: 600;
+        font-style: italic;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5px;
+        color: whitesmoke;
+        font-size: 9px !important;
+        svg{
+          fill: white !important;
+          height: 13px;
+          width: 13px;
+        }
+        &:hover{
+          text-decoration: underline;
+          
+        }&:active{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

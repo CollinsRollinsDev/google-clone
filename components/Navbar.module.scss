@@ -1,0 +1,31 @@
+
+.NavbarContainer{
+  height: 100px;
+  width: 100%;
+  background-color: rgb(3, 14, 117);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 150px;
+  padding: 10px;
+  .siteName{
+    font-size: 25px;
+    font-family: serif;
+    font-weight: 900;
+    font-style: italic;
+    padding: 10px;
+    background-color: rgb(224, 224, 224);
+    height: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    
+    &:active{
+      opacity: 0;
+    }
+  }
+  svg{
+    margin-left: 20px;
+  }
+}
+@import '../utils/mobileViews/Navbar.module.scss';

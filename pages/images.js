@@ -1,16 +1,15 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import Head from 'next/head'
-import React, {useState, useLayoutEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Routes from '../components/Routes'
+import Result from '../components/Result';
 import { useStateContext } from "../contexts/StateContextProvider";
-import { useRouter } from "next/router";
 
-export default function Home() {
-  const router = useRouter();
+
+export default function Images() {
   const [darkTheme, setDarkTheme] = useState(false);
 
   const { 
@@ -21,11 +20,6 @@ export default function Home() {
       loading } =
     useStateContext();
 
-    useLayoutEffect(() => {
-      router.push('/search');
-    }, []);
-    
-
   return (
     <div className={styles.container}>
       <Head>
@@ -34,8 +28,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar searchTerm={searchTerm}/>
       <Routes />
+      <Result loading={loading} currentPath="images" results={results} getResults={getResults} searchTerm={searchTerm} />
       <Footer />
      
     </div>

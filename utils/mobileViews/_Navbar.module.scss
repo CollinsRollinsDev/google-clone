@@ -1,0 +1,26 @@
+@media screen and (max-width: 782px){
+  .NavbarContainer{
+    height: 70px;
+    width: 100% !important;
+    background-color: rgb(3, 14, 117);
+    column-gap: 13px !important;
+    padding: 8px !important;
+    .siteName{
+      font-size: 14px !important;
+      padding: 5px !important;
+      background-color: rgb(224, 224, 224);
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      cursor: pointer;
+      &:active{
+        opacity: 0;
+      }
+    }
+    svg{
+      margin-left: 5px !important;
+      height: 16px;
+      width: 16px;
+    }
+  }
+}

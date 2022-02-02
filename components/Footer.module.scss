@@ -1,0 +1,11 @@
+.FooterContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-top: 50px;
+  border-top: 1px rgb(71, 71, 71) solid;
+}
+
+@import '../utils/mobileViews/Footer.module.scss';
