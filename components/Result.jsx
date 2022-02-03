@@ -12,12 +12,17 @@ const Result = ({ loading, currentPath, results, getResults, searchTerm }) => {
   console.log(results, "as result");
 
   useEffect(() => {
-    if (currentPath === "videos") {
-      console.log("running...");
-      getResults(`/search/q=${searchTerm} videos`);
-    } else {
-      getResults(`/${currentPath}/q=${searchTerm}&num=20`);
+    if(!searchTerm){
+        // no request
+        
+    } else{
+      if (currentPath === "videos") {
+        getResults(`/search/q=${searchTerm} videos`);
+      } else {
+        getResults(`/${currentPath}/q=${searchTerm}&num=20`);
+      }
     }
+   
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count, currentPath]);
 

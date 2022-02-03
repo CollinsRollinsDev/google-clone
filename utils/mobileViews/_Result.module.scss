@@ -28,15 +28,20 @@
   .imageDisplay{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    .imageDiv{
+      height: 90px !important;
+      width: 140px !important;
+      overflow: hidden;
+      position: relative;
+    }
+    .imageParagraph{
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+    }
   }
   
   .videoDisplay{
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // align-items: flex-start;
-    // background-color: rgb(231, 231, 231);
-    // padding: 10px 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
