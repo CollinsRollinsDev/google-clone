@@ -19,7 +19,7 @@ export default function News() {
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="Search Engine by Collins Rollins" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/mypic.jpeg" />
       </Head>
 
       <Navbar searchTerm={searchTerm} />
