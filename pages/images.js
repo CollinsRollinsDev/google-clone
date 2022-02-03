@@ -17,7 +17,7 @@ export default function Images() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+      <title>Rollins Search</title>
         <meta name="description" content="Search Engine by Collins Rollins" />
         <link rel="icon" href="/mypic.jpeg" />
       </Head>
