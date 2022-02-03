@@ -1,5 +1,4 @@
-
-.NavbarContainer{
+.NavbarContainer {
   height: 100px;
   width: 100%;
   background-color: rgb(3, 14, 117);
@@ -8,7 +7,7 @@
   align-items: center;
   column-gap: 150px;
   padding: 10px;
-  .siteName{
+  .siteName {
     font-size: 25px;
     font-family: serif;
     font-weight: 900;
@@ -19,13 +18,13 @@
     border-radius: 10px;
     cursor: pointer;
     display: flex;
-    
-    &:active{
+
+    &:active {
       opacity: 0;
     }
   }
-  svg{
+  svg {
     margin-left: 20px;
   }
 }
-@import '../utils/mobileViews/Navbar.module.scss';
+@import "../utils/mobileViews/Navbar.module.scss";

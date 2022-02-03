@@ -8,16 +8,9 @@ import Routes from "../components/Routes";
 import Result from "../components/Result";
 import { useStateContext } from "../contexts/StateContextProvider";
 
-
 export default function Search() {
-
   const [darkTheme, setDarkTheme] = useState(false);
-  const { 
-    getResults,
-     results, 
-     searchTerm,
-      setSearchTerm, 
-      loading } =
+  const { getResults, results, searchTerm, setSearchTerm, loading } =
     useStateContext();
 
   return (
@@ -28,9 +21,15 @@ export default function Search() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar searchTerm={searchTerm}/>
+      <Navbar searchTerm={searchTerm} />
       <Routes />
-      <Result loading={loading} currentPath="search" results={results} getResults={getResults} searchTerm={searchTerm} />
+      <Result
+        loading={loading}
+        currentPath="search"
+        results={results}
+        getResults={getResults}
+        searchTerm={searchTerm}
+      />
       <Footer />
     </div>
   );

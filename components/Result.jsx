@@ -8,21 +8,17 @@ import ReactPlayer from "react-player";
 
 const Result = ({ loading, currentPath, results, getResults, searchTerm }) => {
   const { setSearchTerm, count, imageResult, setCount } = useStateContext();
-  console.log(currentPath);
-  console.log(results, "as result");
 
   useEffect(() => {
-    if(!searchTerm){
-        // no request
-        
-    } else{
+    if (!searchTerm) {
+      // no request
+    } else {
       if (currentPath === "videos") {
         getResults(`/search/q=${searchTerm} videos`);
       } else {
         getResults(`/${currentPath}/q=${searchTerm}&num=20`);
       }
     }
-   
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count, currentPath]);
 
@@ -117,13 +113,6 @@ const Result = ({ loading, currentPath, results, getResults, searchTerm }) => {
   } else {
     return "ERROR!";
   }
-
-  return (
-    <section className={styles.ResultContainer}>
-      Result
-      <div></div>
-    </section>
-  );
 };
 
 export default Result;

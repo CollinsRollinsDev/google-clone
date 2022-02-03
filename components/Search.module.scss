@@ -1,5 +1,4 @@
-
-.SearchContainer{
+.SearchContainer {
   height: 80px;
   width: 500px;
   border-radius: 10px;
@@ -13,12 +12,12 @@
   justify-content: flex-start;
   row-gap: 20px;
   align-items: flex-start;
-  form{
+  form {
     flex: 1;
     height: 100%;
     width: 100%;
   }
-  input{
+  input {
     // flex: 1;
     height: 100%;
     width: 100%;
@@ -29,14 +28,14 @@
     border-radius: 10px;
     border-color: transparent;
   }
-  .navLinks{
+  .navLinks {
     flex: 1;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    div{
+    div {
       font-weight: 600;
       font-style: italic;
       cursor: pointer;
@@ -46,17 +45,17 @@
       column-gap: 5px;
       color: whitesmoke;
       font-size: 14px;
-      svg{
+      svg {
         fill: white !important;
       }
-      &:hover{
+      &:hover {
         text-decoration: underline;
-        
-      }&:active{
+      }
+      &:active {
         opacity: 0;
       }
     }
   }
 }
 
-@import '../utils/mobileViews/Search.module.scss';
+@import "../utils/mobileViews/Search.module.scss";
