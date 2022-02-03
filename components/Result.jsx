@@ -4,7 +4,7 @@ import { useStateContext } from "../contexts/StateContextProvider";
 import Loading from "./Loading";
 import Link from "next/link";
 import Image from "next/image";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 
 const Result = ({ loading, currentPath, results, getResults, searchTerm }) => {
   const { setSearchTerm, count, imageResult, setCount } = useStateContext();

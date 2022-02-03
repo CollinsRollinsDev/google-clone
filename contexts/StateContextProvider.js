@@ -14,17 +14,18 @@ export const StateContextProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      const myResponse = await fetch(`${baseUrl}${urlToCall}`, {
-        method: "GET",
-        headers: {
-          "x-user-agent": "desktop",
-          "x-proxy-location": "EU",
-          "x-rapidapi-host": "google-search3.p.rapidapi.com",
-          "x-rapidapi-key":
-            "09f37c8ee4mshb2ae5b9a95a2d29p1ede41jsn6de4f786040a",
-        },
-      });
-      const data = await myResponse.json();
+      const myResponse = await fetch(`/api/make_request?url=${urlToCall}`)
+      // const myResponse = await fetch(`${baseUrl}${urlToCall}`, {
+      //   method: "GET",
+      //   headers: {
+      //     "x-user-agent": "desktop",
+      //     "x-proxy-location": "EU",
+      //     "x-rapidapi-host": "google-search3.p.rapidapi.com",
+      //     "x-rapidapi-key":process.env.NEXT_PUBLIC_Google_Api_Key,
+      //   },
+      // });
+      const {data} = await myResponse.json();
+      console.log(data, "as incoming data")
       console.log(urlToCall, "as url");
       if (urlToCall.startsWith("/news")) {
         console.log("news");
